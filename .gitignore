@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+
+# TypeScript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+# Others
+/bin/
+/dist/
+/pkg/
+/.cache/
+/src/assets/
+/src/components/private/
+/src/butter.ts
+/src/github.com/
