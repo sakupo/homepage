@@ -2,7 +2,7 @@
 <template lang="pug">
 #aboutmain
   .titlelink
-    router-link(to="/about/" ontouchstart="")
+    router-link(to="/about/")
       h1 {{ page_title }}
     h2 My portfolio website.
   table(v-if="display")
