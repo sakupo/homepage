@@ -4,20 +4,10 @@
   .titlelink
     router-link(to="/blog")
       h1 {{ page_title }}
-  .Grid
-    div(v-for="(post,index) in posts" :key="post.slug + '_' + index" )
-      router-link(:to="'/blog/' + post.slug")
-        .article
-          figure
-            img(v-if="post.featured_image" :src="post.featured_image" alt="")
-            img(v-else src="http://via.placeholder.com/250x250" alt="")
-          h2 {{ post.title }}
-          //p {{ post.summary }}
-
+  
 </template>
 
 <script lang="ts">
-  import butter from './../butter.ts'
   export default {
     name: 'blog-home',
     props: ["val"],
@@ -38,19 +28,10 @@
       }
     },
     methods: {
-      getPosts() {
-        butter.post.list({
-          page: 1,
-          page_size: this.blognum
-        }).then(res => {
-          this.posts = res.data.data
-        })
+
       }
-    },
-    created() {
-      this.getPosts()
     }
-  }
+  
 </script>
 
 <style scoped lang="sass">

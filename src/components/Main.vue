@@ -2,21 +2,19 @@
 #main
   .content
     .about
-      v-about(val="show")
+      v-about(val="invisible")
     .works
-      v-works
-    //.playroom
-    //  v-playroom
+      v-works(val="invisible")
     .blog  
       blog-home(val=3)
 
 </template>
 
 <script lang="ts">
-import BlogHome from './BlogHome.vue'
-import About from './About.vue'
-import Works from './Works.vue'
-import PlayRoom from './PlayRoom.vue'
+import BlogHome from './blog/BlogHome.vue'
+import About from './topmenu/About.vue'
+import Works from './topmenu/Works.vue'
+import PlayRoom from './topmenu/PlayRoom.vue'
 
 
 export default {

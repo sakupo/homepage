@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '../components/Main'
-import Signup from '../components/Signup'
-import Signin from '../components/Signin'
-import BlogHome from '../components/BlogHome'
-import BlogPost from '../components/BlogPost'
-import Develop from '../components/Develop'
-import Test from '../components/Test'
-import About from '../components/About'
-import Works from '../components/Works'
-import PlayRoom from '../components/PlayRoom'
+import Signup from '../components/auth/Signup'
+import Signin from '../components/auth/Signin'
+import BlogHome from '../components/blog/BlogHome'
+import BlogPost from '../components/blog/BlogPost'
+import Develop from '../components/private/Develop'
+import Test from '../components/private/Test'
+import BlogTest from '../components/private/BlogTest'
+import About from '../components/topmenu/About'
+import Works from '../components/topmenu/Works'
+import Markdown from '../components/works/MarkdownRenderer'
+import PlayRoom from '../components/topmenu/PlayRoom'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
@@ -53,6 +55,12 @@ let router =  new Router({
       component: BlogPost
     },
     {
+      path: '/blogtest',
+      name: 'blog-test',
+      component: BlogTest,
+      meta: { requiresAuth: true }
+    },
+    {
       path: '/develop',
       name: 'v-develop',
       component: Develop,
@@ -75,6 +83,11 @@ let router =  new Router({
       name: 'v-works',
       component: Works,
     },
+    {
+      path: '/works/mdrenderer',
+      name: 'v-markdown',
+      component: Markdown,
+    }
     {
       path: '/playroom',
       name: 'v-playroom',
