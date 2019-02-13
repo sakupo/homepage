@@ -16,11 +16,9 @@
 </template>
 
 <script lang="ts">
-  import Markdown from '../works/MarkdownRenderer.vue'
   export default {
     name: 'v-works',
     components: {
-      Markdown
     },
     props: ["val"],
     data() {
