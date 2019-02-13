@@ -10,7 +10,6 @@ import Test from '../components/private/Test'
 import BlogTest from '../components/private/BlogTest'
 import About from '../components/topmenu/About'
 import Works from '../components/topmenu/Works'
-import Markdown from '../components/works/MarkdownRenderer'
 import PlayRoom from '../components/topmenu/PlayRoom'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -83,11 +82,6 @@ let router =  new Router({
       name: 'v-works',
       component: Works,
     },
-    {
-      path: '/works/mdrenderer',
-      name: 'v-markdown',
-      component: Markdown,
-    }
     {
       path: '/playroom',
       name: 'v-playroom',
