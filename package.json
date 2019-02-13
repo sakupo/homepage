@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.3.1",
-    "firebase": "^5.7.2",
+    "firebase": "^5.8.2",
     "parcel-bundler": "^1.11.0",
     "pug": "^2.0.3",
     "sass": "^1.15.2",
