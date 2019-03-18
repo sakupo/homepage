@@ -4,10 +4,18 @@
   .titlelink
     router-link(to="/blog")
       h1 {{ page_title }}
+  .Grid
+    div(v-for="(item, index) in raw.slice(len - blognum,len).reverse()")
+      router-link(:to="{name: 'blog-post', params: { slug: len - index }}")
+        figure
+          img(:src="item.header.media_order")
+        h3 {{ item.header.title }}
   
 </template>
 
 <script lang="ts">
+  import axios from 'axios'
+
   export default {
     name: 'blog-home',
     props: ["val"],
@@ -18,7 +26,9 @@
         page_title: 'Blog',
         title: '',
         posts: [],
-        blognum: tmp
+        blognum: tmp, 
+        raw: null,
+        len: 0
       }
     },
     watch: {
@@ -27,10 +37,17 @@
         
       }
     },
+    mounted () {
+      this.fetchData()
+    },
     methods: {
-
-      }
+      fetchData: async function () {
+        let res = await axios.get('https://sakuzhang.work/products?return-as=json')
+        this.raw = res.data.children
+        this.len = this.raw.length
+      },
     }
+  }
   
 </script>
 
