@@ -5,7 +5,7 @@
       a(href="https://twitter.com/_saku3" target="_blank")
         img(src="../assets/twitterLogo.png") 
   .copyright
-    h5 ©︎ 2019 saku
+    h5 ©︎ 2020 saku
 </template>
 
 <script lang="ts">
