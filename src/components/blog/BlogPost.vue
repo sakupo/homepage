@@ -1,12 +1,25 @@
 
 <template lang="pug">
 #blog-post
-  .feature
+  .feature(v-if="post.length===1")
+    .container(class="w-75 text-dark bg-white")
+      .row
+        .col-4
+          figure(class="figure center") 
+            img(class="figure-img" :src="post.imgsrc")
+        .col-8(class="text-dark text-left text-justify text-break")
+          h1 {{post.title}}
+          vue-markdown(class="vue-md" :source="post.source")
+    
 </template>
 
 <script lang="ts">
+  import VueMarkdown from 'vue-markdown'
   export default {
     name: 'blog-post',
+    components: {
+      VueMarkdown
+    },
     data() {
       return {
         post: {}
@@ -25,13 +38,11 @@
 
 <style scoped lang="sass">
 #blog-post
-  padding-left: 1rem 
-  text-align: left
+  margin: 0 auto 
   min-height: 100vh
 .feature
-  display: flex
-  justify-content: flex-end //右寄せ
-  align-items: center //垂直方向
+.container
+  min-height: 100vh
 figure
   margin: 0 auto
   width: 100px
@@ -42,7 +53,6 @@ img
   object-fit: cover
   
 h1, h2, h3, h4
-  margin-right: auto
   font-weight: normal
 ul
   list-style-type: none

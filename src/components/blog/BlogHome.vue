@@ -4,6 +4,15 @@
   .titlelink
     router-link(to="/blog")
       h1 {{ page_title }}
+  .container(class="w-50")
+    .blogitem(v-for="i in blognum")
+      .row(v-if="i <= noOfPosts" class="bg-white")
+        .col-4
+          figure(class="figure center") 
+            img(class="figure-img" :src="posts[i-1].imgsrc")
+        .col-8(class="text-dark text-left text-justify text-break")
+          h1 {{posts[i-1].title}}
+          p {{posts[i-1].intro}}
   
 </template>
 
@@ -12,12 +21,14 @@
     name: 'blog-home',
     props: ["val"],
     data() {
-      var tmp: number = 10
+      let tmp: number = 10
       if (this.val) tmp = this.val 
+      let posts = []
       return {
         page_title: 'Blog',
         title: '',
-        posts: [],
+        posts: posts,
+        noOfPosts: posts.length,
         blognum: tmp
       }
     },
@@ -38,21 +49,13 @@
 #bloghomemain
   text-align: center
   min-height: 100vh
-  .Grid
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-    grid-gap: 10px
-    grid-auto-rows: minmax(100px, auto)
-  
 figure
-  margin: 0 auto
   width: 100px
   height: 100px
 img
   width: 100%
   height: 100%
   object-fit: cover
-  
 h1, h2
   font-weight: normal
 .titlelink
@@ -65,6 +68,8 @@ h1, h2
       &:hover
         color: #191970
   display: inline-block
+.blogitem
+  padding: 20px
 ul
   list-style-type: none
   padding: 0
