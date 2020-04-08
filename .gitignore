@@ -16,6 +16,7 @@ typings/
 /pkg/
 /.cache/
 /src/assets/
+src/components/dashboard/
 /src/components/private/
 /src/butter.ts
 /src/github.com/

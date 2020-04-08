@@ -19,9 +19,10 @@
             h4 Twitter
     .row
       .col
-        .item
-          img(src="../assets/schedule.png" width="120px" height="120px")
-          h4 Schedule 
+        router-link(to="/dashboard")
+          .item
+            img(src="../assets/schedule.png" width="120px" height="120px")
+            h4 Schedule 
       .col
         a(href="https://sakupo.github.io/Diary/")
           .item
@@ -73,7 +74,6 @@ export default {
 .col
   padding: 60px
   margin: 0 auto
-
 $itemcolor: #899eeb
 $shadow-width: 10px
 $shadow-width-hover: 2px

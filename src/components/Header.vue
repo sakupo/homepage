@@ -5,13 +5,13 @@ header(class="header")
       img(src="../assets/home.png") 
   nav 
     ul
-      li
+      //li
         router-link(to="/about") About
-      li
+      //li
         router-link(to="/works") Works
       //li
-      //  router-link(to="/playroom") PlayRoom      
-      li
+        router-link(to="/playroom") PlayRoom      
+      //li
         router-link(to="/blog") Blog
 </template>
 

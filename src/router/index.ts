@@ -12,6 +12,7 @@ import About from '../components/topmenu/About'
 import Works from '../components/topmenu/Works'
 import PlayRoom from '../components/topmenu/PlayRoom'
 import Markdown from '../components/works/MarkdownRenderer'
+import Dashboard from '../components/dashboard/Dashboard'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
@@ -93,6 +94,11 @@ let router =  new Router({
       path: '/works/mdrenderer',
       name: 'v-markdown',
       component: Markdown,
+    },
+    {
+      path: '/dashboard',
+      name: 'v-dashboard',
+      component: Dashboard,
     }
   ]
 })
