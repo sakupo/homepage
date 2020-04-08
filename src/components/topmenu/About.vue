@@ -61,7 +61,18 @@
 #aboutmain
   text-align: center
   min-height: 100vh
-  
+  animation: fadeIn 2s ease 0s 1 normal
+  -webkit-animation: fadeIn 2s ease 0s 1 normal
+@keyframes fadeIn 
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 h1, h2
   font-weight: normal
 .titlelink

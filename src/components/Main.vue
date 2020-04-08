@@ -1,13 +1,37 @@
 <template lang="pug">
 #main
-  .content
-    .about
-      v-about(val="invisible")
-    .works
-      v-works(val="invisible")
-    .blog  
-      blog-home(val=3)
-
+  .container
+    .row
+      .col
+        router-link(to="/about")
+          .item
+            img(src="../assets/user.png" width="120px" height="120px")
+            h4 About
+      .col
+        a(href="https://github.com/sakupo")
+          .item
+            img(src="../assets/GitHub-Mark-120px-plus.png" width="120px" height="120px")
+            h4 GitHub
+      .col
+        a(href="https://twitter.com/_saku3")
+          .item
+            img(src="../assets/twitterLogo.png" width="120px" height="120px")
+            h4 Twitter
+    .row
+      .col
+        .item
+          img(src="../assets/schedule.png" width="120px" height="120px")
+          h4 Schedule 
+      .col
+        a(href="https://sakupo.github.io/Diary/")
+          .item
+            img(src="../assets/diary.png" width="120px" height="120px")
+            h4 Diary
+      .col
+        a(href="https://cpucno.hatenablog.com/archive")
+          .item
+            img(src="../assets/hatenablog-logo.eps" width="120px" height="120px")
+            h4 Blog
 </template>
 
 <script lang="ts">
@@ -15,7 +39,6 @@ import BlogHome from './blog/BlogHome.vue'
 import About from './topmenu/About.vue'
 import Works from './topmenu/Works.vue'
 import PlayRoom from './topmenu/PlayRoom.vue'
-
 
 export default {
 
@@ -26,7 +49,6 @@ export default {
     'v-works': Works,
     'v-playroom': PlayRoom
   },
-
   data () {
     return {
     }
@@ -36,31 +58,44 @@ export default {
       // ルートの変更の検知...
     }
   },
-
   methods: {
   }
-
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 #main
-  //padding-top: 60px
   text-align: center
-  background-color: #222
+  background-color: #fff
+  color: #333
   min-height: 100vh
-#bloghomemain
-  min-height: 0
-#aboutmain
-  min-height: 0
-#worksmain
-  min-height: 0
-#playroommain
-  min-height: 0
+.col
+  padding: 60px
+  margin: 0 auto
+
+$itemcolor: #899eeb
+$shadow-width: 10px
+$shadow-width-hover: 2px
+.item
+  display: inline-block
+  width: 160px
+  height: 160px
+  border-radius: 50%
+  text-decoration: none
+  text-align: center
+  background: white
+  box-shadow:0 $shadow-width 0 $shadow-width $itemcolor
+  transform: translateY(-$shadow-width)
+  transition:0.3s all
+  &:hover
+    box-shadow:0 $shadow-width-hover 0 0 $itemcolor
+    transform: translateY(-$shadow-width-hover)
 
 h1, h2
   font-weight: normal
+h4
+  vertical-align: bottom
 ul
   list-style-type: none
   padding: 0
@@ -68,20 +103,11 @@ li
   list-style-type: none
   padding: 0
 a
-  color: #fff 
+  color: #000
   @media screen and (min-width: 768px)
     &:visited
-      color: #fff
+      color: #000
     &:hover
-      color: #191970
-
-
-$secpad: 10px
-.about
-  padding: $secpad
-.playroom
-  padding: $secpad
-.blog
-  padding: $secpad
+      color: #000
  
 </style>
