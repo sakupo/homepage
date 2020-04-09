@@ -2,17 +2,18 @@
 <template lang="pug">
 #playroommain
   .titlelink
-    router-link(to='/playroom/')
+    router-link(to='/gallery')
       h1 {{ page_title }}
+      h6 じゅんびチュウ...
 
 </template>
 
 <script lang="ts">
   export default {
-    name: 'v-playroom',
+    name: 'v-gallery',
     data() {
       return {
-        page_title: 'Play Room',
+        page_title: 'Gallery',
       }
     },
     methods: {
@@ -24,6 +25,18 @@
 #playroommain
   text-align: center
   min-height: 100vh
+  animation: fadeIn 2s ease 0s 1 normal
+  -webkit-animation: fadeIn 2s ease 0s 1 normal
+@keyframes fadeIn 
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
   
 h1, h2
   font-weight: normal

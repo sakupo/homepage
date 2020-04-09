@@ -19,10 +19,10 @@
             h4 Twitter
     .row
       .col
-        router-link(to="/dashboard")
+        router-link(to="/gallery")
           .item(class="item4")
-            img(src="../assets/schedule.png" width="120px" height="120px")
-            h4 Schedule 
+            img(src="../assets/gallery.png" width="120px" height="120px")
+            h4 Gallery
       .col
         a(href="https://sakupo.github.io/Diary/")
           .item(class="item5")
@@ -31,24 +31,14 @@
       .col
         a(href="https://cpucno.hatenablog.com/archive")
           .item(class="item6")
-            img(src="../assets/hatenablog-logo.eps" width="120px" height="120px")
+            img(src="../assets/hatenablog-logo.png" width="120px" height="120px")
             h4 Blog
 </template>
 
 <script lang="ts">
-import BlogHome from './blog/BlogHome.vue'
-import About from './topmenu/About.vue'
-import Works from './topmenu/Works.vue'
-import PlayRoom from './topmenu/PlayRoom.vue'
-
 export default {
-
   name: 'v-main',
   components: {
-    'blog-home': BlogHome,
-    'v-about': About,
-    'v-works': Works,
-    'v-playroom': PlayRoom
   },
   data () {
     return {

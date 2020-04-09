@@ -10,7 +10,7 @@
       td
         .item Name:
       td
-        .cont Saku
+        .cont saku
     br
     tr
       td

@@ -10,7 +10,7 @@ import Test from '../components/private/Test'
 import BlogTest from '../components/private/BlogTest'
 import About from '../components/topmenu/About'
 import Works from '../components/topmenu/Works'
-import PlayRoom from '../components/topmenu/PlayRoom'
+import Gallery from '../components/topmenu/Gallery'
 import Markdown from '../components/works/MarkdownRenderer'
 import Dashboard from '../components/dashboard/Dashboard'
 import * as firebase from 'firebase/app'
@@ -85,10 +85,9 @@ let router =  new Router({
       component: Works,
     },
     {
-      path: '/playroom',
-      name: 'v-playroom',
-      component: PlayRoom,
-      meta: { requiresAuth: true }
+      path: '/gallery',
+      name: 'v-gallery',
+      component: Gallery,
     },
     {
       path: '/works/mdrenderer',
