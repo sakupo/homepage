@@ -18,11 +18,12 @@
             img(src="../assets/twitterLogo.png" width="120px" height="120px")
             h4 Twitter
     .row
-      .col
-        router-link(to="/gallery")
-          .item(class="item4")
-            img(src="../assets/gallery.png" width="120px" height="120px")
-            h4 Gallery
+      //
+        .col
+          router-link(to="/gallery")
+            .item(class="item4")
+              img(src="../assets/gallery.png" width="120px" height="120px")
+              h4 Gallery
       .col
         a(href="https://sakupo.github.io/Diary/")
           .item(class="item5")
