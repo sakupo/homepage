@@ -4,37 +4,64 @@
   .titlelink
     router-link(to="/about")
       h1 {{ page_title }}
-    h2 My portfolio website.
+    h2 Saku's Homepage
   table(v-if="display")
     tr
       td
-        .item Name:
+        .item Name
+      td :
+      td
+        .cont Sakutaro Sugiyama
+    br
+    tr
+      td
+        .item Nickname
+      td :
       td
         .cont saku
     br
     tr
       td
-        .item Location:
+        .item Location
+      td :
       td
         .cont Tokyo, Japan
     br
     tr
       td
-        .item Occupation:
+        .item Occupation
+      td :
       td
-        .cont Student(The 4th year of bachelor's degree)
+        .cont Student (17B/B4/The 4th year of bachelor's degree)
     br
     tr
       td
-        .item Education:
+        .item Education
+      td :
       td
         .cont Tokyo Institute of Technology
     br
     tr
       td
-        .item Major:
+        .item Major
+        td :
       td
         .cont Computer Science
+    br
+    tr
+      td
+        .item Programming Language <br> I often use
+      td :
+      td
+        .cont C++, C#, Java, Nim, Rust, Python
+    br
+    tr
+      td
+        .item I'm interested in
+      td :
+      td
+        .cont Software Engineering, Software Design Methodology, Debugging Support, <br> Agile Software Development, DevOps, Game Development, Machine Learning, Data Mining
+        
    
 
 </template>
