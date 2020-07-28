@@ -53,7 +53,7 @@
         .item Programming Language <br> I often use
       td :
       td
-        .cont C++, C#, Java, Nim, Rust, Python
+        .cont C++, C#, Java, Nim, Rust, Python, Go
     br
     tr
       td
