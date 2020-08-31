@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.pug -p 8080 --no-hmr ",
+    "start": "parcel index.pug -p 8500 --no-hmr ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
