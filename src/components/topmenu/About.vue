@@ -39,7 +39,7 @@
         .item Education
       td :
       td
-        .cont Tokyo Institute of Technology
+        .cont Tokyo Institute of Technology (2017~)
     br
     tr
       td
@@ -61,9 +61,15 @@
       td :
       td
         .cont Software Engineering, Software Design Methodology, Debugging Support, <br> Agile Software Development, DevOps, Game Development, Machine Learning, Data Mining
-        
-   
-
+    br
+    tr
+      td
+        .item Qualifications
+      td :
+      td
+        .cont
+          ul
+            li Applied Information Technology Engineer Examination (2019.10.20)
 </template>
 
 <script lang="ts">
@@ -113,10 +119,8 @@ h1, h2
         color: #191970
   display: inline-block
 ul
-  list-style-type: none
   padding: 0
 li
-  list-style-type: none
   padding: 0
 table
   margin: 0 auto
@@ -125,6 +129,9 @@ table
   .cont
     text-align: left
     margin-left: 3rem
+td
+  vertical-align: top
+
     
 
   
