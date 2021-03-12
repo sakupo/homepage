@@ -12,14 +12,14 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.6.0",
-    "firebase": "^7.21.1",
+    "firebase": "^7.24.0",
     "parcel-bundler": "^1.12.4",
-    "pug": "^3.0.1",
-    "sass": "^1.26.3",
-    "typescript": "^3.8.3",
-    "vue": "^2.6.11",
-    "vue-devtools": "^5.1.3",
-    "vue-template-compiler": "^2.6.11"
+    "pug": "^3.0.2",
+    "sass": "^1.32.8",
+    "typescript": "^3.9.9",
+    "vue": "^2.6.12",
+    "vue-devtools": "^5.1.4",
+    "vue-template-compiler": "^2.6.12"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
@@ -27,14 +27,14 @@
   "dependencies": {
     "app.vue": "^0.1.10",
     "axios": "^0.21.1",
-    "buttercms": "^1.2.2",
+    "buttercms": "^1.2.6",
     "dotenv": "^6.2.0",
     "node-forge": ">=0.10.0",
-    "phaser": "^3.22.0",
+    "phaser": "^3.53.1",
     "router": "^1.3.5",
     "vue-hot-reload-api": "^2.3.4",
     "vue-markdown": "^2.2.4",
     "vue-property-decorator": "^7.3.0",
-    "vue-router": "^3.1.6"
+    "vue-router": "^3.5.1"
   }
 }
